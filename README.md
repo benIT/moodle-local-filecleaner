@@ -2,7 +2,7 @@
 
 ## Installation
 
-Place this repo in the `local` folder of your Moodle installation and named it `clearorphanfiles`. 
+Place this repo in the `local` folder of your Moodle installation and named it `filecleaner`. 
 
 ## Purpose
 
