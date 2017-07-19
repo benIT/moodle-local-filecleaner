@@ -21,6 +21,14 @@
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 defined('MOODLE_INTERNAL') || die();
-$plugin->version = 2017071900;
-$plugin->requires = 2015111000;
-$plugin->component = 'local_filecleaner';
+$capabilities = array(
+
+    'local/filecleaner:manage' => array(
+        'riskbitmask' => RISK_PERSONAL,
+        'captype' => 'read',
+        'contextlevel' => CONTEXT_SYSTEM,
+        'archetypes' => array(
+            'manager' => CAP_ALLOW,
+        ),
+    ),
+);

@@ -21,3 +21,10 @@
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 $string['pluginname'] = 'file cleaner';
+$string['title'] = 'Reseting the fileslastcleanup setting';
+$string['lastCleanUpSetting'] = 'The fileslastcleanup setting (read from db) is now: {$a} ';
+$string['sentence'] = 'Resetting this setting will make the moodle cron job execute again the filecleanup';
+$string['button'] = 'reset fileslastcleanup';
+$string['settings'] = 'settings';
+$string['accessScript'] = 'Access script';
+$string['done'] = 'Setting reset done';

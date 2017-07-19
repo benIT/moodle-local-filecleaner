@@ -24,9 +24,8 @@ if ($unrecognized) {
 $fileCleaner = new FileCleaner();
 if ($options['clean']) {
     $fileCleaner->clean(60 * 60 * 24);
-}
-if ($options['resetdate']) {
-    $fileCleaner->resetFileslastcleanup(time() - 60 * 60 * 24 * 300);
+} elseif ($options['resetdate']) {
+    $fileCleaner->resetFileslastcleanup(time() - 60 * 60 * 24 * 365);
 }
 /*******************************************************************/
 $time_end = microtime(true);

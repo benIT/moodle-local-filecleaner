@@ -20,4 +20,11 @@
  * @author      benIT <benoit.works@gmail.com>
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-$string['pluginname'] = 'nettoyeur de fichier';
+$string['pluginname'] = 'nettoyeur de fichiers';
+$string['title'] = 'Réinitialiser le réglage fileslastcleanup';
+$string['lastCleanUpSetting'] = 'Le réglage fileslastcleanup (lu en base de données) est actuellement : {$a} ';
+$string['sentence'] = 'Réinitialiser ce réglage fera que le cron job de moodle effectuera a nouveau le nettoyage de fichier.';
+$string['button'] = 'Réinitialiser fileslastcleanup';
+$string['settings'] = 'réglages';
+$string['accessScript'] = 'Accéder au script';
+$string['done'] = 'Réinitialisation du réglage effectué';

@@ -20,7 +20,13 @@
  * @author      benIT <benoit.works@gmail.com>
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-defined('MOODLE_INTERNAL') || die();
-$plugin->version = 2017071900;
-$plugin->requires = 2015111000;
-$plugin->component = 'local_filecleaner';
+$context = context_system::instance();
+require_login();
+if ($hassiteconfig) {
+    $admin_settingpage = new admin_settingpage('local_filecleaner', get_string('pluginname', 'local_filecleaner'));
+
+    $admin_settingpage->add(new admin_setting_heading('heading', get_string('settings', 'local_filecleaner'), '
+<a class="btn btn-info" href="/local/filecleaner/">'.get_string('accessScript', 'local_filecleaner').'</a>', ''));
+
+        $ADMIN->add('localplugins', $admin_settingpage);
+}

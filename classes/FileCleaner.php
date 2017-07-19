@@ -34,7 +34,7 @@ class FileCleaner extends file_storage
         } else {
             $this->trashdir = $CFG->dataroot . '/trashdir';
         }
-        echo sprintf('instanciating %s object %s', __CLASS__, PHP_EOL);
+//        echo sprintf('instanciating %s object %s', __CLASS__, PHP_EOL);
         parent::__construct($filedir, $this->trashdir, "$CFG->tempdir/filestorage", $CFG->directorypermissions, $CFG->filepermissions);
     }
 
@@ -120,7 +120,17 @@ class FileCleaner extends file_storage
     public function resetFileslastcleanup($time)
     {
         set_config('fileslastcleanup', $time);
-        echo 'date reseted at ' . $time;
     }
+
+    public function getFileslastcleanup($humanFormat = false)
+    {
+        global $CFG;
+        if ($humanFormat) {
+            return date('Y-m-d', $CFG->fileslastcleanup);
+        } else {
+            return $CFG->fileslastcleanup;
+        }
+    }
+
 
 }
